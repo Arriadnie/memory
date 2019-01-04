@@ -1,7 +1,8 @@
 * {
 	margin: 0;
 	padding: 0;
-	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
 }
 
 body {
@@ -10,11 +11,15 @@ body {
 }
 
 .game {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	width: 720px;
-	flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
 	margin: 70px auto;
-	perspective: 1000px;
+	-webkit-perspective: 1000px;
+	        perspective: 1000px;
 
 }
 
@@ -28,18 +33,23 @@ body {
 	background:#b9b9b9;
 
 	position: relative;
-	transform: scale(1);
+	-webkit-transform: scale(1);
+	    -ms-transform: scale(1);
+	        transform: scale(1);
 		-webkit-transform-style: preserve-3d;
-	-moz-transform-style: preserve-3d;
-	-ms-transform-style: preserve-3d;
 	transform-style: preserve-3d;
+	-webkit-transition: -webkit-transform 0.4s;
+	transition: -webkit-transform 0.4s;
+	-o-transition: transform 0.4s;
 	transition: transform 0.4s;
+	transition: transform 0.4s, -webkit-transform 0.4s;
 
 
 }
 
 .card.flip {
-	transform: rotateY(180deg);
+	-webkit-transform: rotateY(180deg);
+	        transform: rotateY(180deg);
 }
 
 
@@ -47,13 +57,20 @@ body {
 	position: absolute;
 	top: 25px;
 	left: 10px;
-	backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+	        backface-visibility: hidden;
 }
 
 
 .card:active {
-	transform: scale(0.9);
+	-webkit-transform: scale(0.9);
+	    -ms-transform: scale(0.9);
+	        transform: scale(0.9);
+	-webkit-transition: -webkit-transform .2s;
+	transition: -webkit-transform .2s;
+	-o-transition: transform .2s;
 	transition: transform .2s;
+	transition: transform .2s, -webkit-transform .2s;
 }
 
 .back {
@@ -62,7 +79,9 @@ body {
 
 .back {
 	
-	transform: rotateY(180deg);
+	-webkit-transform: rotateY(180deg);
+	
+	        transform: rotateY(180deg);
 }
 
 @media screen and (max-width: 1024px) { 
@@ -82,6 +101,7 @@ body {
 	left: 10px;
 	height: 50%;
 	width: 90%;
-	backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+	        backface-visibility: hidden;
 }
 } 
