@@ -1,0 +1,87 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	
+
+}
+
+.game {
+	display: flex;
+	width: 720px;
+	flex-wrap: wrap;
+	margin: 70px auto;
+	perspective: 1000px;
+
+}
+
+.card {
+	
+	width: 150px;
+	height: 170px;
+	
+	border-radius: 10px;
+	margin: 15px;
+	background:#b9b9b9;
+
+	position: relative;
+	transform: scale(1);
+		-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	-ms-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	transition: transform 0.4s;
+
+
+}
+
+.card.flip {
+	transform: rotateY(180deg);
+}
+
+
+.back, .front{
+	position: absolute;
+	top: 25px;
+	left: 10px;
+	backface-visibility: hidden;
+}
+
+
+.card:active {
+	transform: scale(0.9);
+	transition: transform .2s;
+}
+
+.back {
+
+}
+
+.back {
+	
+	transform: rotateY(180deg);
+}
+
+@media screen and (max-width: 1024px) { 
+   .card {
+	height: 340px;
+	width: 200px;
+   }
+
+   .game {
+   	width: 95%;
+   	margin: 70px auto;
+   }
+
+   .back, .front{
+	position: absolute;
+	top: 80px;
+	left: 10px;
+	height: 50%;
+	width: 90%;
+	backface-visibility: hidden;
+}
+} 
